@@ -1,3 +1,4 @@
+from datetime import date
 import datetime
 from django.db import models
 from django.contrib.auth.models import User
@@ -13,3 +14,8 @@ class toDo(models.Model):
         on_delete=models.CASCADE,
         default=None
     )
+    
+    def time_passed(self):
+        today = date.today()
+        delta = today - self.created_at 
+        return delta.days
