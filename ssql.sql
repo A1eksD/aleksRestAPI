@@ -1,0 +1,1 @@
+DELETE FROM to_do_todo WHERE id=1;
